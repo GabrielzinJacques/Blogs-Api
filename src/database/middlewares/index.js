@@ -1,11 +1,13 @@
 const validateBodyLogin = require('./validateBodyLogin');
-const validadeBodyUser = require('./validateBodyUser');
+const validateBodyUser = require('./validateBodyUser');
 const validateToken = require('./validateToken');
+const validateBodyCategories = require('./validateBodyCategories');
 
 module.exports = {
   valid: {
     validateBodyLogin,
-    validadeBodyUser,
+    validateBodyUser,
     validateToken,
+    validateBodyCategories,
   },
 };
