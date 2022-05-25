@@ -6,7 +6,7 @@ const { JWT_SECRET } = process.env;
 
 // Headers config
 const jwtConfig = {
-  expiresIn: '20m',
+  expiresIn: '1d',
   algorithm: 'HS256',
 };
 

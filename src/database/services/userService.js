@@ -20,6 +20,17 @@ const createUser = async (body) => {
   return token;
 };
 
+const getAll = async () => {
+  const result = await User.findAll({
+    attributes: { exclude: ['password'] },
+  });
+  // result.forEach(({ dataValues }) => {
+  //   delete dataValues.password;
+  // });
+  return result;
+};
+
 module.exports = {
   createUser, 
+  getAll,
 };

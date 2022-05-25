@@ -3,7 +3,6 @@ const generateToken = require('../utils/generateJWT');
 
 const login = async (email, password) => {
   const result = await User.findOne({ where: { email } });
-
   if (!result || result.password !== password) {
     const error = { status: 400, message: 'Invalid fields' };
     throw error;
