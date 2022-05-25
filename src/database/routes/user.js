@@ -10,4 +10,7 @@ userController.createUser);
 userRouter.get('/', middleware.valid.validateToken,
 userController.getAll);
 
+userRouter.get('/:id', middleware.valid.validateToken,
+userController.getById);
+
 module.exports = userRouter;
