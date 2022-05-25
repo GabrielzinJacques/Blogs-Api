@@ -3,7 +3,7 @@ const loginService = require('../services/loginService');
 const login = async (req, res, next) => {
   const { email, password } = req.body;
   try {
-    const token = await loginService(email, password);
+    const token = await loginService.login(email, password);
     return res.status(200).json({ token });
   } catch (error) {
     console.log('Err login', error.message);
@@ -11,4 +11,6 @@ const login = async (req, res, next) => {
   }
 };
 
-module.exports = login;
+module.exports = {
+  login,
+};

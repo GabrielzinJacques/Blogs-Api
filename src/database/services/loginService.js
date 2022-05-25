@@ -12,8 +12,9 @@ const login = async (email, password) => {
   delete result.dataValues.password;
   const payload = result.dataValues;
   const token = generateToken(payload);
-  console.log(typeof token);
   return token;
 };
 
-module.exports = login;
+module.exports = {
+  login,
+};
