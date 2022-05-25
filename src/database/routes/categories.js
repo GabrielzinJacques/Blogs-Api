@@ -8,4 +8,7 @@ categoriesRouter.post('/', middleware.valid.validateToken,
 middleware.valid.validateBodyCategories,
 categoriesController.createCategory);
 
+categoriesRouter.get('/', middleware.valid.validateToken,
+categoriesController.getAll);
+
 module.exports = categoriesRouter;

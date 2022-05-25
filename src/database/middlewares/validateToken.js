@@ -3,7 +3,7 @@ require('dotenv');
 
 const { JWT_SECRET } = process.env;
 
-const validadeToken = async (req, res, next) => {
+const validateToken = async (req, res, next) => {
   const token = req.headers.authorization;
   if (!token) return res.status(401).json({ message: 'Token not found' });
   try {
@@ -20,4 +20,4 @@ const validadeToken = async (req, res, next) => {
   }
 };
 
-module.exports = validadeToken;
+module.exports = validateToken;
