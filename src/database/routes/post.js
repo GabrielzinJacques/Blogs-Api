@@ -4,7 +4,8 @@ const postController = require('../controllers/postController');
 
 const postRouter = express.Router();
 
-postRouter.post('/', middleware.valid.validateToken,
+postRouter.post('/', middleware.valid.validateBodyPost,
+middleware.valid.validateToken,
 postController.createPost);
 
 module.exports = postRouter;
