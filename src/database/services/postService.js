@@ -1,5 +1,6 @@
 const { BlogPost, Category } = require('../models');
 
+// references https://sequelize.org/docs/v6/core-concepts/model-querying-finders/
 const validateCategories = async (categories) => {
   const { count } = await Category.findAndCountAll({ where: { id: categories } });
   if (count === 0) {
